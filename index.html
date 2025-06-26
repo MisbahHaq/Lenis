@@ -14,87 +14,198 @@
         grid-row: var(--r);
         grid-column: var(--c);
       }
+      @media (max-width: 1024px) {
+        .custom-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+          grid-template-rows: repeat(10, minmax(0, 1fr)) !important;
+        }
+      }
+      @media (max-width: 640px) {
+        .custom-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          grid-template-rows: repeat(20, minmax(0, 1fr)) !important;
+        }
+        .custom-overlay-title {
+          font-size: 2.2rem !important;
+        }
+        .custom-overlay-subtitle {
+          font-size: 1.1rem !important;
+        }
+        .custom-paragraph {
+          font-size: 1.1rem !important;
+          line-height: 1.7rem !important;
+          width: 95% !important;
+        }
+      }
+      /* Make h3 bigger for desktop screens */
+      @media (min-width: 641px) {
+        .custom-overlay-subtitle {
+          font-size: 3.5rem !important;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="w-full bg-zinc-900">
-      <div class="grid grid-cols-8 grid-rows-20 gap-2 overflow-hidden">
+      <div
+        class="grid custom-grid grid-cols-8 grid-rows-20 gap-2 overflow-hidden lg:grid-cols-8 lg:grid-rows-20 md:grid-cols-4 md:grid-rows-10 sm:grid-cols-2 sm:grid-rows-20"
+      >
         <!-- 20 Image Boxes -->
         <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 2">
-          <img src="./img/1.jpg" alt="" />
+          <img
+            src="./img/1.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 5">
-          <img src="./img/2.jpg" alt="" />
+          <img
+            src="./img/2.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 1">
-          <img src="./img/3.jpg" alt="" />
+          <img
+            src="./img/3.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 7">
-          <img src="./img/4.jpg" alt="" />
+          <img
+            src="./img/4.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 4">
-          <img src="./img/5.jpg" alt="" />
+          <img
+            src="./img/5.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 8">
-          <img src="./img/6.jpg" alt="" />
+          <img
+            src="./img/6.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 3">
-          <img src="./img/7.jpg" alt="" />
+          <img
+            src="./img/7.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 6">
-          <img src="./img/8.jpg" alt="" />
+          <img
+            src="./img/8.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 5; --c: 2">
-          <img src="./img/9.jpg" alt="" />
+          <img
+            src="./img/9.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 5; --c: 8">
-          <img src="./img/10.jpg" alt="" />
+          <img
+            src="./img/10.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 6; --c: 5">
-          <img src="./img/11.jpg" alt="" />
+          <img
+            src="./img/11.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 6; --c: 1">
-          <img src="./img/12.jpg" alt="" />
+          <img
+            src="./img/12.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 7; --c: 7">
-          <img src="./img/13.jpg" alt="" />
+          <img
+            src="./img/13.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 7; --c: 3">
-          <img src="./img/14.jpg" alt="" />
+          <img
+            src="./img/14.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 8; --c: 6">
-          <img src="./img/15.jpg" alt="" />
+          <img
+            src="./img/15.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 8; --c: 4">
-          <img src="./img/16.jpg" alt="" />
+          <img
+            src="./img/16.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 9; --c: 8">
-          <img src="./img/17.jpg" alt="" />
+          <img
+            src="./img/17.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 9; --c: 2">
-          <img src="./img/18.jpg" alt="" />
+          <img
+            src="./img/18.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 10; --c: 3">
-          <img src="./img/19.jpg" alt="" />
+          <img
+            src="./img/19.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
         <div class="elem col-span-1 row-span-1" style="--r: 10; --c: 7">
-          <img src="./img/20.jpg" alt="" />
+          <img
+            src="./img/20.jpg"
+            alt=""
+            class="w-full h-auto object-cover rounded-md"
+          />
         </div>
       </div>
 
       <!-- Fixed Overlay -->
       <div
-        class="fixed top-0 left-0 w-screen h-screen z-[999] flex flex-col justify-center items-center"
+        class="fixed top-0 left-0 w-screen h-screen z-[999] flex flex-col justify-center items-center pointer-events-none"
       >
         <div
-          class="text-[6rem] font-medium text-center text-white uppercase"
+          class="text-[6rem] sm:text-[2.2rem] font-medium text-center text-white uppercase custom-overlay-title"
           style="font-family: Gilroy"
         >
           Thomas Vance <sup>®</sup>
         </div>
         <div
-          class="text-[2.9rem] font-medium text-center text-white"
+          class="text-[2.9rem] sm:text-[1.1rem] font-medium text-center text-white custom-overlay-subtitle"
           style="font-family: Gilroy"
         >
           並外れたファッション
@@ -105,7 +216,9 @@
       <div
         class="w-full h-screen bg-[#D1D1D1] flex items-center justify-center mx-auto py-96 relative z-[999] text-center"
       >
-        <p class="text-5xl w-3/4 leading-[4.2rem] text-black font-normal">
+        <p
+          class="text-5xl sm:text-lg w-3/4 sm:w-[95%] leading-[4.2rem] sm:leading-7 text-black font-normal custom-paragraph"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
           exercitationem? Animi nihil numquam soluta aliquid ut! Quos minus,
           quod repudiandae ea inventore itaque enim, quisquam expedita numquam
