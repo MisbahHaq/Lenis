@@ -1,11 +1,9 @@
-const product = {
-    name: 'Socks',
-    price: 120
-};
+// Initialize Lenis
+const lenis = new Lenis({
+    autoRaf: true,
+});
 
-console.log(product);
-console.log(product.name);
-console.log(product.price);
-
-product.name = 'Cotton Socks';
-console.log(product);
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+    console.log(e);
+});
