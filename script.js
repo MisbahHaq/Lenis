@@ -19,6 +19,11 @@ document.querySelectorAll('.elem').forEach((elem) => {
             transformOrigin: `${xtransform < 0 ? 0 : '100%'}`,
         })
         .to(image, {
-
+            scale: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: elem,
+                scrub: true,
+            }
         })
 })
