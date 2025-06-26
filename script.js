@@ -7,3 +7,18 @@ const lenis = new Lenis({
 lenis.on('scroll', (e) => {
     console.log(e);
 });
+
+document.querySelectorAll('.elem').forEach((elem) => {
+    let image = elem.querySelector('img');
+    let tl = gsap.timeline()
+
+    let xtransform = gsap.utils.random(-100, 100);
+
+    tl
+        .set(image, {
+            transformOrigin: `${xtransform < 0 ? 0 : '100%'}`,
+        })
+        .to(image, {
+
+        })
+})
