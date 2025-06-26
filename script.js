@@ -19,13 +19,23 @@ document.querySelectorAll('.elem').forEach((elem) => {
     tl
         .set(image, {
             transformOrigin: `${xtransform < 0 ? 0 : '100%'}`,
-        })
+        }, "start")
         .to(image, {
             scale: 0,
             ease: "none",
             scrollTrigger: {
                 trigger: image,
                 start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+            }
+        }, "start")
+        .to(elem, {
+            xPercent: xtransform,
+            ease: "none",
+            scrollTrigger: {
+                trigger: image,
+                start: 'top bottom',
                 end: 'bottom top',
                 scrub: true,
             }
