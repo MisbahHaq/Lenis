@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://unpkg.com/lenis@1.3.4/dist/lenis.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .grid > div {
         grid-row: var(--r);
@@ -20,6 +20,7 @@
   <body>
     <div class="w-full bg-zinc-900">
       <div class="grid grid-cols-8 grid-rows-20 gap-2">
+        <!-- 20 Image Boxes -->
         <div class="col-span-1 row-span-1" style="--r: 1; --c: 2">
           <img src="./img/1.jpg" alt="" />
         </div>
@@ -81,51 +82,34 @@
           <img src="./img/20.jpg" alt="" />
         </div>
       </div>
+
+      <!-- Fixed Overlay -->
       <div
-        style="
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          z-index: 9999;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        "
+        class="fixed top-0 left-0 w-screen h-screen z-[9999] flex flex-col justify-center items-center"
       >
         <div
-          style="
-            font-size: 6rem;
-            font-weight: 500;
-            text-align: center;
-            font-family: Gilroy;
-            color: whitesmoke;
-            text-transform: uppercase;
-          "
+          class="text-[6rem] font-medium text-center text-white uppercase"
+          style="font-family: Gilroy"
         >
-          Thomas Vance
-          <sup>®</sup>
+          Thomas Vance <sup>®</sup>
         </div>
         <div
-          style="
-            font-size: 2.9rem;
-            font-weight: 500;
-            text-align: center;
-            color: whitesmoke;
-            font-family: Gilroy;
-          "
+          class="text-[2.9rem] font-medium text-center text-white"
+          style="font-family: Gilroy"
         >
           並外れたファッション
         </div>
       </div>
-      <div class="w-full h-screen mx-auto py-96 relative z-[999] text-center">
-        <p class="text-white">
+
+      <!-- Section with Paragraph -->
+      <div
+        class="w-full h-screen bg-[#D1D1D1] flex items-center justify-center mx-auto py-96 relative z-[999] text-center"
+      >
+        <p class="text-5xl w-3/4 leading-[4.2rem] text-black font-normal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
           exercitationem? Animi nihil numquam soluta aliquid ut! Quos minus,
           quod repudiandae ea inventore itaque enim, quisquam expedita numquam
-          repellat quidem a, quasi necessitatibus veniam obcaecati nulla!
+          repellat quidem a, quasi necessitatibus veniam obcaecati nulla!®
         </p>
       </div>
     </div>
