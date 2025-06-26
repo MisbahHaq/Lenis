@@ -8,6 +8,8 @@ lenis.on('scroll', (e) => {
     console.log(e);
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
 document.querySelectorAll('.elem').forEach((elem) => {
     let image = elem.querySelector('img');
     let tl = gsap.timeline()
@@ -22,7 +24,9 @@ document.querySelectorAll('.elem').forEach((elem) => {
             scale: 0,
             ease: "none",
             scrollTrigger: {
-                trigger: elem,
+                trigger: image,
+                start: 'top top',
+                end: 'bottom top',
                 scrub: true,
             }
         })
