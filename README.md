@@ -1,2 +1,1 @@
-# Miscellaneous-7
-
+# Lenis Practice for Smooth Scrolling
